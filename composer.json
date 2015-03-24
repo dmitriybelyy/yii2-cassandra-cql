@@ -1,0 +1,26 @@
+{
+    "name": "beliy/yii2-cassandra-cql",
+    "description": "A Cassandra CQL3 client wrapper over phpcassa for Yii 2",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","cassandra","phpcassa"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/dmitriybelyy/yii2-cassandra-cql/issues",
+        "wiki": "https://github.com/dmitriybelyy/yii2-cassandra-cql/wiki",
+        "source": "https://github.com/dmitriybelyy/yii2-cassandra-cql"
+    },
+    "authors": [
+        {
+            "name": "Dima Beliy",
+            "email": "dmitriy.belyy@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "beliy\\cassandra\\": ""
+        }
+    }
+}
