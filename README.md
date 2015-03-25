@@ -21,6 +21,12 @@ Either run
 php composer.phar require --prefer-dist beliy/yii2-cassandra-cql "*"
 ```
 
+or
+
+```
+composer require beliy/yii2-cassandra-cql:dev-master
+```
+
 or add
 
 ```
@@ -32,8 +38,20 @@ to the require section of your `composer.json` file.
 
 Usage
 -----
+    'components' => [
+    ...
+      'cassandra' => [
+            'class' => '\beliy\cassandra\CassandraConnection',
+            'keyspace' => 'youkeyspace',
+            'servers' => ['127.0.0.1'],
+        ],
+        ...
+      ]
 
-TODO
+      $cassa = Yii::$app->cassandra;
+      $cql = 'SELECT value FROM yourtable WHERE id=1';
+      $query_result = $cass->cql3Query($cql);
+      $rows = $cass->cqlGetRows($query_result);
 
 **REQUIREMENTS**
 
@@ -41,6 +59,7 @@ Yii 2.0.3 / PHP 5.5+
 
 **Resources**
 
-Fork extensions http://www.yiiframework.com/extension/cassandra-cql
+Fork extensions from http://www.yiiframework.com/extension/cassandra-cql
+
 External Projects used in this extension is the phpcassa library for PHP and Cassandra https://github.com/thobbs/phpcassa
 
