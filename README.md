@@ -41,17 +41,29 @@ Usage
     'components' => [
     ...
       'cassandra' => [
-            'class' => '\beliy\cassandra\CassandraConnection',
+            'class' => '\beliy\cassandra\Connection',
             'keyspace' => 'youkeyspace',
-            'servers' => ['127.0.0.1'],
+            'servers' => ['127.0.0.1', ...],
+        ],
+        'cache' => [
+          'class' => '\beliy\cassandra\Cache',
+          'tableName' => 'cache', // dedault 'cache'
+          'tablePrefix' => 'mega', // default ''
         ],
         ...
       ]
 
-      $cassa = Yii::$app->cassandra;
+      $cass = Yii::$app->cassandra;
       $cql = 'SELECT value FROM yourtable WHERE id=1';
       $query_result = $cass->cql3Query($cql);
       $rows = $cass->cqlGetRows($query_result);
+
+      Usage for cache:
+      First you may init column fammily storage fro cache.
+      $cache = Yii::$app->cache;
+      $cache->createTable();
+
+      Than use standart Yii2 Cache APIs.
 
 **REQUIREMENTS**
 

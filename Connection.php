@@ -16,7 +16,7 @@ use cassandra\ConsistencyLevel;
  * @version 1.0.alpha
  * @package beliy\cassandra
  */
-class CassandraConnection extends Component
+class Connection extends Component
 {
     protected $pool = null;
     public $keyspace = null;
