@@ -1,3 +1,5 @@
+
+
 yii2-cassandra-cql
 ==================
 A Cassandra CQL3 client wrapper over phpcassa for Yii 2
@@ -9,6 +11,11 @@ This extension also handles issues with the phpcassa library 'Data Types' while 
 The following discussion on StackOverflow describes the problem:
 
 http://stackoverflow.com/questions/16139362/cassandra-is-not-retrieving-the-correct-integer-value
+
+Deprecated
+------------
+Phpcassa has been deprecated and will no longer be supported!
+Please use  https://github.com/datastax/php-driver
 
 Installation
 ------------
